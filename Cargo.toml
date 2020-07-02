@@ -1,0 +1,6 @@
+[package]
+name = "letter_reciprocal"
+version = "0.1.0"
+author = ["Priyadarshan Giri"]
+
+[dependencies]
