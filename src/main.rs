@@ -5,7 +5,7 @@ fn reciprocal_char(c : char) -> char {
     'a'..='z' => (25 - (c as u8 - 'a' as u8) + 'a' as u8) as char,
     'A'..='Z' => (25 - (c as u8 - 'A' as u8) + 'A' as u8) as char,
     '0'..='9' => (9 - (c as u8 - '0' as u8) + '0' as u8) as char,
-    _ => c,   // Here we don't do anything
+    _ => c,
   }
 }
 
