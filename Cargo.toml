@@ -4,3 +4,4 @@ version = "0.1.0"
 author = ["Priyadarshan Giri"]
 
 [dependencies]
+inputparser = "0.1"

@@ -1,5 +1,3 @@
-use std::io;
-
 fn reciprocal_char(c: char) -> char {
     match c {
         'a'..='z' => (25 - (c as u8 - 'a' as u8) + 'a' as u8) as char,
@@ -10,10 +8,8 @@ fn reciprocal_char(c: char) -> char {
 }
 
 fn main() {
-    let mut input = String::new();
-    let stdin = io::stdin();
     println!("Enter the string: ");
-    stdin.read_line(&mut input).expect("Error reading line!");
+    let input = inputparser::stringinput();
     let reciprocated: String = input.chars().map(reciprocal_char).collect();
     println!("Here's your string: {}", reciprocated);
 }
