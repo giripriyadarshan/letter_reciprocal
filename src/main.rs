@@ -9,7 +9,7 @@ fn reciprocal_char(c: char) -> char {
 
 fn main() {
     println!("Enter the string: ");
-    let input = inputparser::stringinput();
+    let input: String = inputparser::input();
     let reciprocated: String = input.chars().map(reciprocal_char).collect();
     println!("Here's your string: {}", reciprocated);
 }
