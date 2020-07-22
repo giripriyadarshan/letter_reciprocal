@@ -1,3 +1,7 @@
+extern crate inputparser;
+
+use crate::inputparser::{input,ErHandle::*};
+
 fn reciprocal_char(c: char) -> char {
     match c {
         'a'..='z' => (25 - (c as u8 - 'a' as u8) + 'a' as u8) as char,
@@ -9,7 +13,7 @@ fn reciprocal_char(c: char) -> char {
 
 fn main() {
     println!("Enter the string: ");
-    let input: String = inputparser::input();
-    let reciprocated: String = input.chars().map(reciprocal_char).collect();
+    let i: String = input(Def);
+    let reciprocated: String = i.chars().map(reciprocal_char).collect();
     println!("Here's your string: {}", reciprocated);
 }
